@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="popup.css" />
+    <link rel="stylesheet" href="comboTreestyle.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <title>Creative Commons</title>
+  </head>
+
+  <body>
+    <header>
+      <a href="https://creativecommons.org" target="_blank">
+        <img src="img/cc-logo_white.png" alt="cc logo" />
+      </a>
+    </header>
+    <div class="container">
+      <section class="section-search">
+        <input type="text" placeholder="search the commons..." id="section-search-input" autofocus />
+        <i class="material-icons" id="search-icon">search</i>
+        <i class="material-icons" id="filter-icon">filter_list</i>
+      </section>
+      <section class="section-filter">
+        <div class="section-filter__filter-wrapper section-filter__filter-wrapper--choose-usecase">
+          <input type="text" id="choose-usecase" placeholder="I want something that" />
+        </div>
+        <div class="section-filter__filter-wrapper section-filter__filter-wrapper--choose-license">
+          <input type="text" id="choose-license" placeholder="All licenses" />
+        </div>
+        <div class="section-filter__filter-wrapper section-filter__filter-wrapper--choose-provider">
+          <input type="text" id="choose-provider" placeholder="All Providers" />
+        </div>
+        <span class="section-filter__provider-loading-mes">Fetching Providers List . . .</span>
+        <a href="#" class="section-filter--apply-button" title="apply filters">Apply</a>
+        <a href="#" class="section-filter--reset-button" title="reset filters">Reset</a>
+      </section>
+      <span id="error-message"></span>
+      <section class="section-content">
+        <div class="row">
+          <p class="initial-info">
+            Search for free content in the public domain and under Creative Commons licenses.<br /><br />
+            Learn more about CC licenses
+            <a href="https://creativecommons.org/share-your-work/licensing-types-examples/" target="_blank">
+              here.
+            </a>
+          </p>
+        </div>
+        <div class="section-content__images-container">
+          <div class="grid">
+            <div class="gutter-sizer"></div>
+          </div>
+        </div>
+        <div id="spinner">
+          <div class="sk-child sk-double-bounce1"></div>
+          <div class="sk-child sk-double-bounce2"></div>
+        </div>
+        <p class="no-more-images-mes display-none">No more images!</p>
+      </section>
+    </div>
+    <footer>
+      <div class="footer-box">
+        <a href="https://creativecommons.org/about/contact/" target="_blank">Contact</a>
+      </div>
+      <div class="footer-box">
+        <a href="https://creativecommons.org/privacy/" target="_blank">Privacy</a>
+      </div>
+      <div class="footer-box">
+        <a href="https://creativecommons.org/donate/other-ways-to-give/" target="_blank">
+          <img src="img/ccheart_red.svg" alt="cc-heart-logo"
+        /></a>
+      </div>
+      <div class="footer-box">
+        <a href="https://creativecommons.org/policies/" target="_blank">Policies</a>
+      </div>
+      <div class="footer-box">
+        <a href="https://creativecommons.org/terms/" target="_blank">Terms</a>
+      </div>
+    </footer>
+
+    <script src="jquery.min.js"></script>
+    <script src="masonry.min.js"></script>
+    <script src="imagesloaded.min.js"></script>
+    <script src="comboTreePlugin.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

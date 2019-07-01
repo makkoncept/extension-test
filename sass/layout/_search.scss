@@ -1,0 +1,126 @@
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.section-search {
+  margin-top: 4%;
+  position: relative;
+
+  input[type="text"] {
+    width: 100%;
+    font-size: 130%;
+    background: $color-white;
+    padding: 2%;
+    border: 1.2px solid $color-primary-light;
+    transition: all 0.3s ease-in-out;
+
+    &:focus {
+      box-shadow: 0 0 0.5rem $color-primary-dark;
+      border: 1.2px solid $color-primary-dark;
+    }
+  }
+
+  i {
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $color-secondary-light;
+    font-size: 170%;
+
+    &#filter-icon {
+      right: 10%;
+    }
+
+    &:hover {
+      color: $color-secondary-dark;
+      cursor: pointer;
+    }
+  }
+}
+
+.section-filter {
+  width: 100%;
+  height: 5rem;
+  display: none;
+  position: relative;
+
+  &--active {
+    display: flex;
+    align-items: center;
+  }
+
+  &__provider-loading-mes {
+    font-size: 15px;
+    color: $color-black;
+  }
+
+  &__filter-wrapper {
+    display: inline-block;
+    margin-right: 1rem;
+
+    &--choose-usecase {
+      width: 17rem;
+    }
+
+    &--choose-license {
+      width: 11rem;
+    }
+
+    &--choose-provider {
+      width: 20rem;
+      display: none;
+    }
+  }
+
+  &--reset-button:link,
+  &--reset-button:visited {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    bottom: -13px;
+    text-decoration: none;
+    color: $color-secondary-dark;
+    padding: 0 4px;
+    border: 1.5px dotted $color-secondary-dark;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+    border-radius: 2px;
+
+    &:hover {
+      background-color: $color-secondary-dark;
+      color: $color-white;
+    }
+
+    &:active {
+      transform: translateY(1px);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &--apply-button:link,
+  &--apply-button:visited {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 4px;
+    text-decoration: none;
+    background-color: $color-primary-dark;
+    color: $color-white;
+    padding: 0 4px;
+    border: 1.5px dotted $color-primary-dark;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s;
+    border-radius: 2px;
+
+    &:hover {
+      background-color: darken($color-primary-dark, 10);
+    }
+
+    &:active {
+      transform: translateY(1px);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
